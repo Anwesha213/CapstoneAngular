@@ -60,9 +60,6 @@ export class CheckoutComponent implements OnInit {
   {
     this.cartService.removeCartItem(item)
   }
-
-  // reduce return the single value
-  // map creates a new array from calling a function for every array element.
   
   calculatePrice(){
     if(this.checkoutdata.length>0)

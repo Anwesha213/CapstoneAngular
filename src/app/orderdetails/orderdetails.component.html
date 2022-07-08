@@ -13,12 +13,12 @@
         <div>
           <td>Product Quantity:{{list.productQuantity}}</td>
         </div>
-        <!-- <div>
+        <div>
           <td><img style="width: 100px;" src="{{list.productImage}}" alt=""></td>
-        </div> -->
+        </div>
       </div>
       <div>
-        <td><strong>Total:</strong>{{list.productPrice}}</td>
+        <td><strong>Total:</strong>{{list.productPrice * list.productQuantity}}</td>
       </div>
     </tr>
   </div>

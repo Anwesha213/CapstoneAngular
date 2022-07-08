@@ -18,7 +18,6 @@ const routes: Routes = [
   {path:'orderdetails',component:OrderdetailsComponent},
   {path:'footer',component:FooterComponent},
   {path:'',redirectTo:'cart', pathMatch:'full'}
-  // faltu code
 ];
 
 @NgModule({

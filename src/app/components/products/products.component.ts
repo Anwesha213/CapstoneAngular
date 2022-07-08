@@ -24,7 +24,6 @@ export class ProductsComponent implements OnInit {
       console.log(data);
       this.result = data;
       this.filterproductCategories = data;
-      // for cart use--
       this.result.forEach((a: any) => {
         Object.assign(a, { quantity: 1, total: a.Price })
       });
@@ -36,7 +35,6 @@ export class ProductsComponent implements OnInit {
   }
 
   // for cart
-
   addtocart(cart: IProduct) {
     if (!this.cartService.cartItemList.includes(cart)) {
       this.cartService.addtoCart(cart);
