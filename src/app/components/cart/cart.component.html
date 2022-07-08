@@ -10,8 +10,8 @@
                             <th>Product Image</th>
                             <th>Description</th>
                             <th>Price</th>
-                            <th>quantity</th>
-                            <th>total</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -24,41 +24,41 @@
                             <td>₹{{item.productPrice}}</td>
                             <td>
                                 <span class="input-group-prepend">
-                                    <button type="button" style="display:inline; position:relative; right:40px; top:21px; width: 20%; padding-left: 8px;" class="btn btn-outline-secondary btn-number"
-                                         data-type="minus" (click)="removeQuantity(item)" >
+                                    <button type="button" style="display:inline; position:relative; 
+                                        right:40px; top:21px; width: 2rem; padding-left: 8px; "
+                                        class="btn btn-outline-success" data-type="minus"
+                                        (click)="removeQuantity(item)">
                                         <span class="fa fa-minus"></span>
                                     </button>
                                 </span>
-                                {{item.productQuantity}}
+                                <b>{{item.productQuantity}}</b>
                                 <span class="input-group-append">
-                                    <button type="button" style="display:inline; position:relative; left:20px; bottom:40px; width: 20%; padding-left: 8px;" class="btn btn-outline-secondary btn-number" data-type="plus" (click)="addQuantity(item)">
+                                    <button type="button" style="display:inline; position:relative; 
+                                        left:20px; bottom:40px; width: 2rem; padding-left: 8px;"
+                                        class="btn btn-outline-success" data-type="plus" (click)="addQuantity(item)">
                                         <span class="fa fa-plus"></span>
                                     </button>
                                 </span>
                             </td>
                             <td>{{item.productTotal}}</td>
                             <td>
-                                <!-- <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>  -->
                                 <button (click)="removeItem(item); calculatePrice();" class="btn btn-danger"><i
-                                        class="fas fa-trash-alt"></i></button>
-
+                                        class="fas fa-trash-alt"></i>
+                                </button>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2" class="keys"></td>
+                            <td colspan="" class="keys"></td>
                             <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
                             <td><button routerLink="/products" class="btn btn-primary">Shop More</button></td>
                             <td><button class="btn btn-success" routerLink="/checkout">Checkout</button></td>
-                            <td><strong>Grand Total : ${{grandTotal}}</strong></td>
-
-
+                            <td><b>Total :</b><strong> ₹{{grandTotal}}</strong></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-
 </ng-container>
 
 <ng-container *ngIf="product.length==0">
@@ -74,57 +74,4 @@
             <button routerLink="/products" class="btn btn-primary">Shop Now</button>
         </div>
     </div>
-
 </ng-container>
-
-
-<!-- <ng-container *ngIf="true">
-    <div class="container">
-        <div class="container">
-            <div class="card-table">
-                <div class="card-product">
-                    <table class="table table-responsive">
-                        <thead>
-                            <tr>
-                                <th>Sr.no</th>
-                                <th>Product Name</th>
-                                <th>Product Image</th>
-                                <th>Description</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Laptop</td>
-                                <td>Img here</td>
-                                <td>this is the laptop</td>
-                                <td>45300</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</ng-container>
-<ng-container *ngIf="false">
-    <div class="container">
-        <div class="card">
-            <h4 class="card-title">My Cart</h4>
-        </div>
-        <div class="center">
-            <!-- img Pendding -->
-<!-- <img src="../../../assets/img/emptyshoppingbasket.jpg" alt="">
-            <h5>Your cart is empty!</h5>
-            <h6>Add item to it now</h6>
-            <button class="btn btn-primary">Shop Now</button>
-        </div>
-    </div>
-</ng-container> -->

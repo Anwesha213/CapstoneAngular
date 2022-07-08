@@ -1,48 +1,22 @@
 <header>
     <div>
-    <div class="navbar navbar-dark bg-primary shadow-sm">
-        <div class="navbar-brand align-item-center d-flex">
-            <i style="font-size: 35px;" class="fas fa-shipping-fast"></i>
-            <strong style="font-size: 25px;" routerLink="/products">FastShopping</strong>
-            <div class="from-group"> <span class="search-icon fas fa-search"></span>
-                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search Products">
+        <div class="navbar navbar-dark bg-primary shadow-sm">
+            <div class="navbar-brand align-item-center d-flex">
+                <i style="font-size: 35px;" routerLink="/products" class="fas fa-shipping-fast"></i>
+                <strong style="font-size: 25px; color: black;" routerLink="/products">FastShopping</strong>
+                <div class="from-group"> <span class="search-icon fas fa-search"></span>
+                    <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)"
+                        placeholder="Search Products">
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-primary" routerLink="cart">
+                    <i style="font-size: 25px;" class="fas fa-cart-plus"></i>
+                    <div class="badge bg-danger">{{totalItem}}</div>
+                </button>
+                <button class="btn btn-primary" routerLink="login">Login</button>
+                <button class="btn btn-primary" routerLink="signup">Signup</button>
             </div>
         </div>
-        <div>
-            <button class="btn btn-primary" routerLink="cart" >
-            <i style="font-size: 25px;" class="fas fa-cart-plus"></i>
-            <div class="badge bg-danger">{{totalItem}}</div>
-        </button>
-        <button class="btn btn-primary" routerLink="login">Login</button>
-        <button class="btn btn-primary" routerLink="signup">Signup</button>
     </div>
-    </div>
-</div>
 </header>
-
-
-
-<!-- <div class="cart-top container-fluid">
-    <div class="container d-flex">
-        <div class="items">
-            <a >
-                <h6 routerLink="/products" >All Products</h6>
-            </a>
-        </div>
-        <div class="items">
-            <a>
-                <h6>Electronics</h6>
-            </a>
-        </div>
-        <div class="items">
-            <a>
-                <h6>Fashion</h6>
-            </a> 
-        </div>
-        <div class="items">
-            <a>
-                <h6>Jewelery</h6>
-            </a>
-        </div>
-    </div>
-</div> -->

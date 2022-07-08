@@ -3,8 +3,6 @@ const bodyparser = require('body-parser');
 const cors = require('cors');
 
 const db = require('./connection');
-// const { Component } = require('@angular/core');
-// const { Interface } = require('readline');
 
 const app = express();
 
@@ -43,33 +41,35 @@ app.get('/Products', (req, res) => {
         .catch(err => console.log(err, 'errs'));
 });
 
-//Get all data of eProducts table
-app.get('/eProducts', (req, res) => {
-    let qr = `Select * from public."eProducts"`
-    db
-        .query({
-            text: qr
-        })
-        .then(result => {
-            var data1 = []; 
-            for (var i = 0; i < result.rows.length; i++) {
-                data1.push({
-                    eproductId: result.rows[i].eproductId,
-                    eproductName: result.rows[i].eproductName,
-                    eproductPrice: result.rows[i].eproductPrice,
-                    eproductCategories: result.rows[i].eproductCategories,
-                    eproductDescription: result.rows[i].eproductDescription,
-                    eproductImage: result.rows[i].eproductImage
-                });
-            }
-            res.send(
-                data1
-            );
-        })
-        .catch(err => console.log(err, 'errs'));
-});
-
-
 app.listen(3000, () => {
     console.log('Server Running');
 })
+
+
+
+
+//Get all data of eProducts table
+// app.get('/eProducts', (req, res) => {
+//     let qr = `Select * from public."eProducts"`
+//     db
+//         .query({
+//             text: qr
+//         })
+//         .then(result => {
+//             var data1 = []; 
+//             for (var i = 0; i < result.rows.length; i++) {
+//                 data1.push({
+//                     eproductId: result.rows[i].eproductId,
+//                     eproductName: result.rows[i].eproductName,
+//                     eproductPrice: result.rows[i].eproductPrice,
+//                     eproductCategories: result.rows[i].eproductCategories,
+//                     eproductDescription: result.rows[i].eproductDescription,
+//                     eproductImage: result.rows[i].eproductImage
+//                 });
+//             }
+//             res.send(
+//                 data1
+//             );
+//         })
+//         .catch(err => console.log(err, 'errs'));
+// });

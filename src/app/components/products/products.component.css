@@ -1,8 +1,9 @@
+
 .cart-top{
     display: flex;
     min-width: 0;
     word-wrap: break-word;
-    background-color: rgb(97, 244, 97);
+    background-color:#FFEBCD;
     background-clip: border-box;
     position: relative;
     flex-direction: column;
@@ -54,4 +55,8 @@
 .card img:hover{
     transition: 0.3s ease-in-out;
     transform: scale(1.1);
+}
+.float{
+    margin: 19px 350px;
+    color: red;
 }

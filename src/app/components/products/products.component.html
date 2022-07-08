@@ -1,8 +1,8 @@
 <div class="cart-top container-fluid">
     <div class="container d-flex">
         <div class="items">
-            <a (click)="filter('')" >
-                <h6 routerLink="/products" >All Products</h6>
+            <a (click)="filter('')">
+                <h6 routerLink="/products">All Products</h6>
             </a>
         </div>
         <div class="items">
@@ -13,60 +13,29 @@
         <div class="items">
             <a (click)="filter('Fashion')">
                 <h6>Fashion</h6>
-            </a> 
+            </a>
         </div>
         <div class="items">
             <a (click)="filter('Jewellery')">
-                <h6>Jewelery</h6>
+                <h6>Jewellery</h6>
             </a>
         </div>
     </div>
 </div>
-
 <div class="container">
     <div class="row">
-        <ng-container *ngFor="let item of filterproductCategories | filter:searchKey: 'title'">
-        <div class="card col-md-3">
-            <!-- <h5>{{item.productId}}</h5> -->
-            <!-- <p><b>Category:</b>{{item.productCategories}}</p> -->
-            <img src="{{item.productImage}}" (click)=addtocart(item)>
-            <p><strong>{{item.productName}}</strong></p>
-            <p><b>₹{{item.productPrice}}</b></p>
-            <p><b>Description:</b> {{item.productDescription}}</p>
-            <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
-        </div>
-    </ng-container>
+        <ng-container
+            *ngFor="let item of filterproductCategories | paginate:{itemsPerPage:4, currentPage:p }| filter:searchKey: 'title'">
+            <div class="card col-md-3">
+                <!-- <h5>{{item.productId}}</h5> -->
+                <!-- <p><b>Category:</b>{{item.productCategories}}</p> -->
+                <img src="{{item.productImage}}" (click)=addtocart(item)>
+                <p><strong>{{item.productName}}</strong></p>
+                <p><b>₹{{item.productPrice}}</b></p>
+                <p><b>Description:</b> {{item.productDescription}}</p>
+                <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
+            </div>
+        </ng-container>
+        <pagination-controls (pageChange)="p =$event" class="float"></pagination-controls>
     </div>
 </div>
-
-
-
-
-<!--<div class="cart-top container-fluid">
-    <div class="container d-flex">
-        <div class="items">
-            <a>
-                <!-- <img src="../../../assets/img/images (1).jpg"> 
-                <h6 routerLink="/products" >All Products</h6>
-            </a>
-        </div>
-        <div class="items">
-            <a>
-                <!-- <img src="../../../assets/img/download.jpg" routerLink="/electronics"> 
-                <h6 routerLink="/electronics">Electronics</h6>
-            </a>
-        </div>
-        <div class="items">
-            <a>
-                <!-- <img src="../../../assets/img/images.jpg"> 
-                <h6>Fashion</h6>
-            </a> 
-        </div>
-        <div class="items">
-            <a>
-                <!-- <img src="../../../assets/img/imgj.jpeg"> 
-                <h6>Jewelery</h6>
-            </a>
-        </div>
-    </div>
-</div>-->

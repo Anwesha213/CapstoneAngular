@@ -1,5 +1,6 @@
 export interface IProduct {
     value: string;
+    
     productId:number;
 
     productName:String;
@@ -11,4 +12,8 @@ export interface IProduct {
     productImage:string;
 
     productDescription:string;
+
+    quantity:number;
+
+    
 }

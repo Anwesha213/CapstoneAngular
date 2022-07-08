@@ -1,0 +1,47 @@
+<!-- html code -->
+
+<!-- work properl -->
+<div class="col-25">
+  <div class="container">
+    <h4>Your Item</h4>
+    <tr *ngFor="let list of checkoutdata; let i= index">
+      <div class="container">
+        <td>{{i+1}}.</td>
+        <div>
+          <td>Product Name:{{list.productName}}</td>
+        </div>
+        <div>
+          <td>Product Quantity:{{list.productQuantity}}</td>
+        </div>
+        <!-- <div>
+          <td><img style="width: 100px;" src="{{list.productImage}}" alt=""></td>
+        </div> -->
+      </div>
+      <div>
+        <td><strong>Total:</strong>{{list.productPrice}}</td>
+      </div>
+    </tr>
+  </div>
+  <div>
+    <!-- <td>
+              <button (click)="removeItem(list); calculatePrice();" class="btn btn-danger"><i
+                  class="fas fa-trash-alt"></i></button>
+          </td> -->
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <h4 class="inline">Total:</h4>₹{{grandTotal}}
+    </div>
+    <div>
+      <h5 class="inline difwidth">Shipping and Handling</h5>
+      <p class="inline alignright center">Free Shipping</p>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+      <h5>Total Amount</h5>₹{{grandTotal}}
+    </div>
+    <button class="place-order">Place Order</button>
+  </div>
+</div>
