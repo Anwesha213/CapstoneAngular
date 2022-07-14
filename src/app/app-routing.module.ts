@@ -9,6 +9,7 @@ import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PaymentDetailsComponent } from './payment-details/payment-details.component';
 import { PaymentDetailFormComponent } from './payment-details/payment-detail-form/payment-detail-form.component';
+import { ThankyoupageComponent } from './thankyoupage/thankyoupage.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login', pathMatch:'full'},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'footer',component:FooterComponent},
   {path:'payment-details',component:PaymentDetailsComponent},
   {path:'payment-detail-form',component:PaymentDetailFormComponent},
+  {path:'thankyoupage',component:ThankyoupageComponent},
   {path:'',redirectTo:'cart', pathMatch:'full'}
 ];
 

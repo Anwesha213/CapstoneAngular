@@ -31,7 +31,7 @@ export class PaymentDetailFormComponent implements OnInit {
       this.resetForm(form);
       this.service.refreshList();
       this.toastr.success('Your record has been submitted successfully','Payment Detail Register');
-      this.router.navigate(['/products']);
+      this.router.navigate(['/thankyoupage']);
       },
       err => { console.log(err); }
     );
