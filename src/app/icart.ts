@@ -1,6 +1,8 @@
-export interface IProduct {
+export interface ICart {
     value?: string;
-    
+
+    cartId:number;
+
     productId:number;
 
     productName:String;
@@ -13,7 +15,5 @@ export interface IProduct {
 
     productDescription:string;
 
-    quantity:number;
-
-    
+    productQuantity:number;
 }

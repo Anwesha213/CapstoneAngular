@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "Ashley Mayar",
+      "email": "ashleymayar@gmail.com",
+      "password": "abcd@1234",
+      "mobile": 9836363654,
+      "id": 1
+    },
+    {
+      "fullname": "abc",
+      "email": "abc@gmail.com",
+      "password": "efgfh",
+      "mobile": 7980765435,
+      "id": 2
+    },
+    {
+      "fullname": "Aniket Waghmare",
+      "email": "killer@gmail.com",
+      "password": "1234",
+      "mobile": 9165743728,
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

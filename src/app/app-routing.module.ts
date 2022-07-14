@@ -7,9 +7,11 @@ import { SignupComponent } from './components/signup/signup.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PaymentDetailsComponent } from './payment-details/payment-details.component';
+import { PaymentDetailFormComponent } from './payment-details/payment-detail-form/payment-detail-form.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'products', pathMatch:'full'},
+  {path:'',redirectTo:'login', pathMatch:'full'},
   {path:'products', component:ProductsComponent},
   {path:'login', component:LoginComponent},
   {path:'cart', component:CartComponent},
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path:'checkout', component:CheckoutComponent},
   {path:'orderdetails',component:OrderdetailsComponent},
   {path:'footer',component:FooterComponent},
+  {path:'payment-details',component:PaymentDetailsComponent},
+  {path:'payment-detail-form',component:PaymentDetailFormComponent},
   {path:'',redirectTo:'cart', pathMatch:'full'}
 ];
 

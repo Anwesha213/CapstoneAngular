@@ -1,64 +1,21 @@
-body  {  
-    margin: 0;  
-    padding: 0;  
-    background-color:#6abadeba;  
-    font-family: 'Arial';  
-}  
-.login{  
-    width: 460px;  
-    overflow: hidden;  
-    margin: auto;  
-    margin: 20 0 0 450px;  
-    padding: 80px;  
-    background: #233f46;  
-    border-radius: 15px ;       
-} 
+.card{
+    border: none;
+    width: 500px;
+    padding: 40px;
+    margin-top: 10px;
+    position: relative;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    background: hsla(205, 46%, 30%, 1);
+    background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1) 100%);
+}
 
-h2{  
-    text-align: center;  
-    color: #277582;  
-    padding: 20px;  
-}  
+.card h1,
+h6 {
+    color: #fff;
+}
 
-label{  
-    color: #08ffd1;  
-    font-size: 17px;
-    margin-right: 10px;
-}  
-
-#Uname{  
-    width: 300px;  
-    height: 30px;  
-    border: none;  
-    border-radius: 3px;  
-    padding-left: 8px;  
-}  
-
-#Pass{  
-    width: 300px;  
-    height: 30px;  
-    border: none;  
-    border-radius: 3px;  
-    padding-left: 8px;  
-
-}  
-
-#log{  
-    width: 300px;  
-    height: 30px;  
-    border: none;  
-    border-radius: 17px;  
-    padding-left: 7px;  
-    color: blue;  
-}  
-
-span{  
-    color: white;  
-    font-size: 17px;  
-}  
-
-a{  
-    float: right;  
-    background-color: grey;
-    align-content: center;
-}  
+label {
+    color: #fff;
+}
