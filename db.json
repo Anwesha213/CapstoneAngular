@@ -27,6 +27,13 @@
       "password": "1234",
       "mobile": 9165743728,
       "id": 3
+    },
+    {
+      "fullname": "Aniket Waghmare",
+      "email": "aniket@gmail.com",
+      "password": "abcd@1234",
+      "mobile": 9234567863,
+      "id": 4
     }
   ],
   "profile": {

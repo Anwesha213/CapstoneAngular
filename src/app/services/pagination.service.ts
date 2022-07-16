@@ -8,7 +8,7 @@ export class PaginationService {
 
   constructor(private httpService: HttpClient) { }
   getData() {
-    return this.httpService.get('https://localhost:44307/api/products');
+    return this.httpService.get('https://localhost:44308/api/products');
   }
 }
 
